@@ -1,0 +1,18 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">Create a new post</h1>
+    <form action="/posts" method="POST" enctype="multipart/form-data" data-test="form">
+      <div class="form">
+        <div class="form-body">
+          <% errors.forEach(error => { %>
+            <div class="form-error" data-test="error-<%= error.param %>"><%= error.msg %></div>
+          <% }) %>
+          <textarea name="content" data-test="textarea-content"><%= post.content %></textarea>
+          <label for="image">Image</label>
+          <input id="image" type="file" name="image" data-test="input-image">
+          <input type="submit" value="Post" data-test="submit">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
