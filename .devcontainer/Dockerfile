@@ -1,4 +1,4 @@
-ARG VARIANT="16-buster"
+ARG VARIANT="18-buster"
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
 # [Optional] Uncomment if you want to install an additional version of node using nvm
